@@ -144,6 +144,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "eos"
+    }
+  },
+  "defaultProject": "eos",
+  "cli": {
+    "analytics": false
+  }
 }
