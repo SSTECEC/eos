@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Eos</title>
@@ -9,33 +10,34 @@
 
   <link rel="shortcut icon" href="favicon.ico">
 
-	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="assets/css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="assets/css/icomoon.css">
-	<!-- Simple Line Icons -->
-	<link rel="stylesheet" href="assets/css/simple-line-icons.css">
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet'
+    type='text/css'>
 
-	<link rel="stylesheet" href="assets/css/style2.css">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <!-- Icomoon Icon Fonts-->
+  <link rel="stylesheet" href="assets/css/icomoon.css">
+  <!-- Simple Line Icons -->
+  <link rel="stylesheet" href="assets/css/simple-line-icons.css">
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
 
-	<!-- Styleswitcher ( This style is for demo purposes only, you may delete this anytime. ) -->
-	<link rel="stylesheet" id="theme-switch" href="assets/css/style2.css">
+  <link rel="stylesheet" href="assets/css/style2.css">
+
+  <!-- Styleswitcher ( This style is for demo purposes only, you may delete this anytime. ) -->
+  <link rel="stylesheet" id="theme-switch" href="assets/css/style2.css">
 
   <style>
     /* For demo purpose only */
-    
+
     /* For Demo Purposes Only ( You can delete this anytime :-) */
     #colour-variations {
       padding: 10px;
       -webkit-transition: 0.5s;
-        -o-transition: 0.5s;
-        transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
       width: 140px;
       position: fixed;
       left: 0;
@@ -45,35 +47,42 @@
       /*border-radius: 4px;*/
       border-top-right-radius: 4px;
       border-bottom-right-radius: 4px;
-      -webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
-      -moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
-      -ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
-      box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+      -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+      -moz-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+      -ms-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+      box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
     }
+
     #colour-variations.sleep {
       margin-left: -140px;
     }
+
     #colour-variations h3 {
-      text-align: center;;
+      text-align: center;
+      ;
       font-size: 11px;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: #777;
       margin: 0 0 10px 0;
-      padding: 0;;
+      padding: 0;
+      ;
     }
+
     #colour-variations ul,
     #colour-variations ul li {
       padding: 0;
       margin: 0;
     }
+
     #colour-variations li {
       list-style: none;
       display: block;
-      margin-bottom: 5px!important;
+      margin-bottom: 5px !important;
       float: left;
       width: 100%;
     }
+
     #colour-variations li a {
       width: 100%;
       position: relative;
@@ -87,20 +96,22 @@
       -o-transition: 0.4s;
       transition: 0.4s;
     }
+
     #colour-variations li a:hover {
-        opacity: .9;
+      opacity: .9;
     }
-    #colour-variations li a > span {
+
+    #colour-variations li a>span {
       width: 33.33%;
       height: 20px;
-     /*  float: left; */
+      /*  float: left; */
       display: -moz-inline-stack;
       display: inline-block;
       zoom: 1;
       *display: inline;
     }
-    
-  
+
+
     .option-toggle {
       position: absolute;
       right: 0;
@@ -115,66 +126,122 @@
       border-bottom-right-radius: 4px;
       color: #fff;
       cursor: pointer;
-      -webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
-      -moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
-      -ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
-      box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+      -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+      -moz-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+      -ms-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+      box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
     }
+
     .option-toggle i {
       top: 2px;
       position: relative;
     }
-    .option-toggle:hover, .option-toggle:focus, .option-toggle:active {
-      color:  #fff;
+
+    .option-toggle:hover,
+    .option-toggle:focus,
+    .option-toggle:active {
+      color: #fff;
       text-decoration: none;
       outline: none;
     }
-    </style>
+  </style>
 
 
 </head>
+
 <body>
   <app-root></app-root>
 
   <script src="assets/js/modernizr-2.6.2.min.js"></script>
   <!-- jQuery -->
-	<script src="assets/js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="assets/js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="assets/js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="assets/js/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="assets/js/jquery.stellar.min.js"></script>
-	<!-- Counter -->
-	<script src="assets/js/jquery.countTo.js"></script>
-	<!-- Magnific Popup -->
-	<script src="assets/js/jquery.magnific-popup.min.js"></script>
-	<script src="assets/js/magnific-popup-options.js"></script>
-	<!-- Google Map -->
-	<script src="assets/js/google_map.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <!-- jQuery Easing -->
+  <script src="assets/js/jquery.easing.1.3.js"></script>
+  <!-- Bootstrap -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- Waypoints -->
+  <script src="assets/js/jquery.waypoints.min.js"></script>
+  <!-- Stellar Parallax -->
+  <script src="assets/js/jquery.stellar.min.js"></script>
+  <!-- Counter -->
+  <script src="assets/js/jquery.countTo.js"></script>
+  <!-- Magnific Popup -->
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/magnific-popup-options.js"></script>
+  <!-- Google Map -->
+  <script src="assets/js/google_map.js"></script>
 
-	<!-- For demo purposes only styleswitcher ( You may delete this anytime ) -->
-	<script src="assets/js/jquery.style.switcher.js"></script>
-	<script>
-		$(function(){
-			$('#colour-variations ul').styleSwitcher({
-				defaultThemeId: 'theme-switch',
-				hasPreview: false,
-				cookie: {
-		          	expires: 30,
-		          	isManagingLoad: true
-		      	}
-			});	
-			$('.option-toggle').click(function() {
-				$('#colour-variations').toggleClass('sleep');
-			});
-		});
-	</script>
-	<!-- End demo purposes only -->
+  <!-- For demo purposes only styleswitcher ( You may delete this anytime ) -->
+  <script src="assets/js/jquery.style.switcher.js"></script>
+  <script>
+    $(function () {
+      $('#colour-variations ul').styleSwitcher({
+        defaultThemeId: 'theme-switch',
+        hasPreview: false,
+        cookie: {
+          expires: 30,
+          isManagingLoad: true
+        }
+      });
+      $('.option-toggle').click(function () {
+        $('#colour-variations').toggleClass('sleep');
+      });
+    });
+  </script>
+  <!-- End demo purposes only -->
 
-	<!-- Main JS (Do not remove) -->
-	<script src="assets/js/main.js"></script>
+  <!-- Main JS (Do not remove) -->
+  <script src="assets/js/main.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      $('.form').find('input, textarea').on('keyup blur focus', function (e) {
+
+        var $this = $(this),
+          label = $this.prev('label');
+
+        if (e.type === 'keyup') {
+          if ($this.val() === '') {
+            label.removeClass('active highlight');
+          } else {
+            label.addClass('active highlight');
+          }
+        } else if (e.type === 'blur') {
+          if ($this.val() === '') {
+            label.removeClass('active highlight');
+          } else {
+            label.removeClass('highlight');
+          }
+        } else if (e.type === 'focus') {
+
+          if ($this.val() === '') {
+            label.removeClass('highlight');
+          }
+          else if ($this.val() !== '') {
+            label.addClass('highlight');
+          }
+        }
+
+      });
+
+      $('.tab a').on('click', function (e) {
+
+        e.preventDefault();
+
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+
+        target = $(this).attr('href');
+
+        $('.tab-content > div').not(target).hide();
+
+        $(target).fadeIn(600);
+
+      });
+    });
+
+  </script>
 </body>
+
 </html>

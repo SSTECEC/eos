@@ -406,6 +406,15 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 4;
 }
+#fh5co-home, #fh5co-home .text-wrap2 {
+  height: 690px;
+}
+#fh5co-home .text-wrap2 {
+  display: table;
+  width: 100%;
+  position: relative;
+  z-index: 4;
+}
 #fh5co-home .text-inner {
   display: table-cell;
   vertical-align: middle;
