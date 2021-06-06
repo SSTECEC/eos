@@ -1,101 +1,100 @@
+<section id="fh5co-home" data-section="home" data-stellar-background-ratio="0.5"> 
+  <video autoplay muted loop id="myVideo">
+    <source src="../../../assets/images/video-bg-1.mp4" type="video/mp4">
+  </video>
+  <div class="container">
+    <div class="text-wrap2">
+      <div class="text-inner">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="form">
 
-<section id="fh5co-home" data-section="home"
-    data-stellar-background-ratio="0.5">    <video autoplay muted loop id="myVideo">
-        <source src="../../../assets/images/video-bg.mp4" type="video/mp4">
-    </video>
-    <div class="container">
-        <div class="text-wrap2">
-            <div class="text-inner">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="form">
+              <ul class="tab-group">
+                <li class="tab active"><a href="#login">Ingresar</a></li>
+                <li class="tab"><a href="#signup">Registrarse</a></li>
 
-                            <ul class="tab-group">
-                                <li class="tab active"><a href="#login">Ingresar</a></li>
-                                <li class="tab"><a href="#signup">Registrarse</a></li>
+              </ul>
 
-                            </ul>
-
-                            <div class="tab-content">
+              <div class="tab-content">
 
 
-                                <div id="login">
-                                    <h2>Bienvenido!</h2>
-                                    <br>
-                                    <form action="/" method="post">
+                <div id="login">
+                  <h2>Bienvenido!</h2>
+                  <br>
+                  <form action="/" method="post">
 
-                                        <div class="field-wrap">
-                                            <label>
-                                                Email Address<span class="req">*</span>
-                                            </label>
-                                            <input type="email" required autocomplete="off" />
-                                        </div>
-
-                                        <div class="field-wrap">
-                                            <label>
-                                                Password<span class="req">*</span>
-                                            </label>
-                                            <input type="password" required autocomplete="off" />
-                                        </div>
-
-                                        <p class="forgot"><a href="#">Olvidó su contraseña?</a></p>
-
-                                        <button class="button button-block">Ingresar</button><br>
-                                        <button class="button button-block">Ingresar Sesion con Google</button>
-
-                                    </form>
-
-                                </div>
-
-                                <div id="signup">
-                                    <h2>Registrarse</h2>
-
-                                    <form action="/" method="post">
-
-                                        <div class="top-row">
-                                            <div class="field-wrap">
-                                                <label>
-                                                    Nombre<span class="req">*</span>
-                                                </label>
-                                                <input type="text" required autocomplete="off" />
-                                            </div>
-
-                                            <div class="field-wrap">
-                                                <label>
-                                                    Apellido<span class="req">*</span>
-                                                </label>
-                                                <input type="text" required autocomplete="off" />
-                                            </div>
-                                        </div>
-
-                                        <div class="field-wrap">
-                                            <label>
-                                                Email Address<span class="req">*</span>
-                                            </label>
-                                            <input type="email" required autocomplete="off" />
-                                        </div>
-
-                                        <div class="field-wrap">
-                                            <label>
-                                                Set A Password<span class="req">*</span>
-                                            </label>
-                                            <input type="password" required autocomplete="off" />
-                                        </div>
-
-                                        <button type="submit" class="button button-block">Registrarse</button>
-                                        <button type="submit" class="button button-block">Registrarse con
-                                            Google</button>
-                                    </form>
-
-                                </div>
-
-                            </div><!-- tab-content -->
-
-                        </div> <!-- /form -->
+                    <div class="field-wrap">
+                      <label>
+                        Email Address<span class="req">*</span>
+                      </label>
+                      <input type="email" required autocomplete="off" />
                     </div>
+
+                    <div class="field-wrap">
+                      <label>
+                        Password<span class="req">*</span>
+                      </label>
+                      <input type="password" required autocomplete="off" />
+                    </div>
+
+                    <p class="forgot"><a href="#">Olvidó su contraseña?</a></p>
+
+                    <button class="button button-block">Ingresar</button><br>
+                    <button class="button button-block" (click)="loginGoogle()">Ingresar Sesion con Google</button>
+
+                  </form>
+
                 </div>
-            </div>
+
+                <div id="signup">
+                  <h2>Registrarse</h2>
+
+                  <form action="/" method="post">
+
+                    <div class="top-row">
+                      <div class="field-wrap">
+                        <label>
+                          Nombre<span class="req">*</span>
+                        </label>
+                        <input type="text" required autocomplete="off" />
+                      </div>
+
+                      <div class="field-wrap">
+                        <label>
+                          Apellido<span class="req">*</span>
+                        </label>
+                        <input type="text" required autocomplete="off" />
+                      </div>
+                    </div>
+
+                    <div class="field-wrap">
+                      <label>
+                        Email Address<span class="req">*</span>
+                      </label>
+                      <input type="email" required autocomplete="off" />
+                    </div>
+
+                    <div class="field-wrap">
+                      <label>
+                        Set A Password<span class="req">*</span>
+                      </label>
+                      <input type="password" required autocomplete="off" />
+                    </div>
+
+                    <button type="submit" class="button button-block">Registrarse</button>
+                    <button type="submit" class="button button-block">Registrarse con
+                      Google</button>
+                  </form>
+
+                </div>
+
+              </div><!-- tab-content -->
+
+            </div> <!-- /form -->
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
 </section>
