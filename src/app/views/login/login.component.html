@@ -21,7 +21,7 @@
                 <div id="login">
                   <h2>Bienvenido!</h2>
                   <br>
-                  <form action="/" method="post">
+                  <form (ngSubmit)="onLogin()">
 
                     <div class="field-wrap">
                       <label>
@@ -39,10 +39,12 @@
 
                     <p class="forgot"><a href="#">Olvidó su contraseña?</a></p>
 
-                    <button class="button button-block">Ingresar</button><br>
-                    <button class="button button-block" (click)="onGoogleLogin()">Ingresar Sesion con Google</button>
- 
+                    <button class="button button-block">Ingresar</button>
+                                      
                   </form>
+                  <div class="form-group mt-3">
+                  <button class="button button-block" (click)="onGoogleLogin()">Ingresar Sesion con Google</button>
+                </div>
 
                 </div>
 

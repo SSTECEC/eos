@@ -42,4 +42,50 @@ export class AuthService {
       return userRef.set(data, { merge: true });
     }
 
+    async logout(): Promise<void> {
+      try {
+        await this.afAuth.signOut();
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    async resetPassword(email: string): Promise<void> {
+      try {
+        return this.afAuth.sendPasswordResetEmail(email);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  
+    async sendVerificationEmail(): Promise<void> {
+      return (await this.afAuth.currentUser).sendEmailVerification();
+    }
+  
+    async login(email: string, password: string): Promise<User> {
+      try {
+        const { user } = await this.afAuth.signInWithEmailAndPassword(
+          email,
+          password
+        );
+        this.updateUserData(user);
+        return user;
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  
+    async register(email: string, password: string): Promise<User> {
+      try {
+        const { user } = await this.afAuth.createUserWithEmailAndPassword(
+          email,
+          password
+        );
+        await this.sendVerificationEmail();
+        return user;
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
 }
