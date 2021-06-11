@@ -1,56 +1,45 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import * as firebase from 'firebase/app';
+import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { User } from 'src/app/models/user.interface';
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 
 @Injectable()
 export class AuthService {
 
   constructor(
     private afAuth: AngularFireAuth,
-    private router: Router) {}
+    private afs: AngularFirestore) {}
 
-  login(email: string, password: string) {
-    this.afAuth.signInWithEmailAndPassword(email, password)
-    .then(value => {
-      console.log('Nice, it worked!');
-      this.router.navigateByUrl('/profile');
-    })
-    .catch(err => {
-      console.log('Something went wrong: ', err.message);
-    });
-  }
 
-  emailSignup(email: string, password: string) {
-    this.afAuth.createUserWithEmailAndPassword(email, password)
-    .then(value => {
-     console.log('Sucess', value);
-     this.router.navigateByUrl('/profile');
-    })
-    .catch(error => {
-      console.log('Something went wrong: ', error);
-    });
-  }
+    async loginGoogle(): Promise<User> {
+      try {
+        const { user } = await this.afAuth.signInWithPopup(
+          new auth.GoogleAuthProvider()
+        );
+        this.updateUserData(user);
+        return user;
+      } catch (error) {
+        console.log(error);
+      }
+    }
+ 
 
-  googleLogin() {
-    const provider = new firebase.default.auth.GoogleAuthProvider();
-    return this.oAuthLogin(provider)
-      .then(value => {
-     console.log('Sucess', value),
-     this.router.navigateByUrl('/profile');
-   })
-    .catch(error => {
-      console.log('Something went wrong: ', error);
-    });
-  }
+    private updateUserData(user: User) {
+      const userRef: AngularFirestoreDocument<User> = this.afs.doc(
+        `users/${user.uid}`
+      );
+  
+      const data: User = {
+        uid: user.uid,
+        email: user.email,
+        emailVerified: user.emailVerified,
+        displayName: user.displayName,
+        photoURL: user.photoURL,
+        role: 'ADMIN',
+      };
+  
+      return userRef.set(data, { merge: true });
+    }
 
-  logout() {
-    this.afAuth.signOut().then(() => {
-      this.router.navigate(['/']);
-    });
-  }
-
-  private oAuthLogin(provider) {
-    return this.afAuth.signInWithPopup(provider);
-  }
 }
