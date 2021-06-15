@@ -12,8 +12,12 @@ import { AuthService } from '../../services/auth/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  loginForm = new FormGroup({email: new FormControl(''), password: new FormControl(''),
-});
+  public registerForm = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl(''),
+  });
+
+  loginForm = new FormGroup({email: new FormControl(''), password: new FormControl('')});
   constructor(private authSvc: AuthService, private router: Router) { }
 
   async onGoogleLogin() {
@@ -33,9 +37,9 @@ export class LoginComponent implements OnInit {
     if (user && user.emailVerified) {
       this.router.navigate(['/farmer/inicio']);
     } else if (user) {
-      this.router.navigate(['/verification-email']);
+      this.router.navigate(['/farmer/inicio']);
     } else {
-      this.router.navigate(['/register']);
+      this.router.navigate(['/farmer/inicio']);
     }
   }
 
@@ -43,6 +47,19 @@ export class LoginComponent implements OnInit {
     const { email, password } = this.loginForm.value;
     try {
       const user = await this.authSvc.login(email, password);
+      if (user) {
+        this.checkUserIsVerified(user);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+    async onRegister() {
+    const { email, password } = this.registerForm.value;
+    try {
+      const user = await this.authSvc.register('david18cas@hotmail.com', 'password');
+      console.log('register',user);
       if (user) {
         this.checkUserIsVerified(user);
       }

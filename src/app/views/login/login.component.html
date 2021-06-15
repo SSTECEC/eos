@@ -39,21 +39,22 @@
 
                     <p class="forgot"><a href="#">Olvidó su contraseña?</a></p>
 
-                    <button class="button button-block">Ingresar</button>
+                    <button class="btn btn-primary btn-lg">Ingresar</button>
                                       
                   </form>
+                  <br>
                   <div class="form-group mt-3">
-                  <button class="button button-block" (click)="onGoogleLogin()">Ingresar Sesion con Google</button>
+                  <button class="btn btn-danger btn-lg" (click)="onGoogleLogin()">Ingresar Sesion con      <i class="fab fa-google"></i></button>
                 </div>
 
                 </div>
 
-                <div id="signup">
+                <div id="signup"> 
+                
                   <h2>Registrarse</h2>
-
-                  <form action="/" method="post">
-
-                    <div class="top-row">
+                  <br>
+                  <form  >
+<!--                     <div class="top-row">
                       <div class="field-wrap">
                         <label>
                           Nombre<span class="req">*</span>
@@ -68,24 +69,25 @@
                         <input type="text" required autocomplete="off" />
                       </div>
                     </div>
-
+ -->
+             
+ 
                     <div class="field-wrap">
                       <label>
                         Email Address<span class="req">*</span>
                       </label>
-                      <input type="email" required autocomplete="off" />
+                      <input type="email" required autocomplete="off"  formControlName="email" />
                     </div>
 
                     <div class="field-wrap">
                       <label>
                         Set A Password<span class="req">*</span>
                       </label>
-                      <input type="password" required autocomplete="off" />
+                      <input type="password" required autocomplete="off"  formControlName="password" />
                     </div>
 
-                    <button type="submit" class="button button-block">Registrarse</button>
-                    <button type="submit" class="button button-block">Registrarse con
-                      Google</button>
+                    <button type="submit" class="btn btn-primary btn-lg" (click)="onRegister()">Registrarse</button>
+
                   </form>
 
                 </div>
