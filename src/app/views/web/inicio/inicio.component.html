@@ -1,10 +1,62 @@
-<div class="col-md-9 col-md">
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d510694.05674441525!2d-78.71074535511856!3d-0.1859053427081941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a4002427c9f%3A0x44b991e158ef5572!2sQuito!5e0!3m2!1ses-419!2sec!4v1623786235698!5m2!1ses-419!2sec"
-        width="100%" height="776" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-</div>
-<div class="col-md-3 col-md">
-    <h2>LISTA DE CAMPOS</h2>
+<div  style="background-color: black;">
 
-    <input type="search" name="busquedamusica" placeholder="Busqueda de Campos">
+
+    <div class="col-md-8"  style="background-color: black;">
+
+
+        <input _ngcontent-fei-c10="" class="search-input ng-untouched ng-pristine ng-valid" type="text" placeholder="Buscar ubicación">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d510694.05674441525!2d-78.71074535511856!3d-0.1859053427081941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a4002427c9f%3A0x44b991e158ef5572!2sQuito!5e0!3m2!1ses-419!2sec!4v1623786235698!5m2!1ses-419!2sec"
+          width="100%" height="776" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+>
+
+    </div>
+    <div class="col-md-4 col-md"  style="background-color: #110A2E;">
+
+        <br>
+        <h2 style="color: white; text-align: center;">LISTA DE CAMPOS</h2>
+        <br>
+        <form action="">
+          <input class="input" type="text" placeholder="    Busqueda de Campo" />
+          <hr />
+        </form>
+        <form action="">
+          <p class="p1" (click)="abrirModalCampo()"> 
+            Añada sus campos
+
+            Examine imágenes de satélite, índices de vegetación, datos meteorológicos y mucho más</p>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <button class="boton" (click)="abrirModalCampo()"> + AÑADIR CAMPOS</button>
+        </form>
+
+    </div>
+
+
+</div>
+
+<!-- MODAL AGREGAR CAMPO -->
+
+
+
+<!-- The Modal -->
+
+<div class="modal fade bd-example-modal-lg" id="verificarParticipante" tabindex="-1" role="dialog"
+  aria-labelledby="verificarParticipante" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content" style="padding: 25px;">
+
+      <h5 class="modal-title" id="verificarParticipante">Verificar Participante</h5>
+      <div>
+
+
+        <div class="col-md-6 col-md">
+          <i class="fas fa-cloud-upload-alt"></i>
+
+        </div>
+        <div class="col-md-6 col-md">
+          <i class="fas fa-pencil-ruler"></i>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

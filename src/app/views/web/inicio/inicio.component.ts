@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth/auth.service';
 
-
+declare var $: any
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
@@ -23,5 +23,12 @@ export class InicioComponent implements OnInit {
       console.log(error);
     }
   }
+
+  public abrirModalCampo() {
+     
+       $('#verificarParticipante').modal('show');
+   
+  }
+
 
 }
