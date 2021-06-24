@@ -51,9 +51,9 @@
 
                 <div id="signup"> 
                 
-                  <h2>Registrarse</h2>
+                  <h2>Registrarse</h2> 
                   <br>
-                  <form  >
+                  <form (ngSubmit)="onRegister()" >
 <!--                     <div class="top-row">
                       <div class="field-wrap">
                         <label>
@@ -86,7 +86,7 @@
                       <input type="password" required autocomplete="off"  formControlName="password" />
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-lg" (click)="onRegister()">Registrarse</button>
+                    <button type="submit" class="btn btn-primary btn-lg" >Registrarse</button>
 
                   </form>
 

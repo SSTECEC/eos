@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
     async onRegister() {
     const { email, password } = this.registerForm.value;
     try {
-      const user = await this.authSvc.register('david18cas@hotmail.com', 'password');
+      const user = await this.authSvc.register(email, password);
       console.log('register',user);
       if (user) {
         this.checkUserIsVerified(user);
