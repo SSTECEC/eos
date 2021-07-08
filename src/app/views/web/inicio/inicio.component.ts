@@ -9,6 +9,7 @@ declare var $: any
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
+  modal = 0;
 
   constructor(public authSvc: AuthService, private router: Router) { }
 
@@ -24,11 +25,12 @@ export class InicioComponent implements OnInit {
     }
   }
 
-  public abrirModalCampo() {
-     
-       $('#verificarParticipante').modal('show');
-   
-  }
+  public abrirModalEOS() {
 
+    console.log(!"datos")
+
+    $('#modalEOS').modal('show');
+
+  }
 
 }
